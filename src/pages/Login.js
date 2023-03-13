@@ -9,7 +9,7 @@ import { login } from "../features/auth/authSlice";
 let schema = yup.object().shape({
   email: yup
     .string()
-    .email("Email should be valid")
+    .email("Email should be valid!")
     .required("Email is Required"),
   password: yup.string().required("Password is Required"),
 });
@@ -38,17 +38,17 @@ const Login = () => {
     }
   }, [user, isError, isSuccess, isLoading, navigate]);
   return (
-    <div className="py-5" style={{ background: "#ffd333", minHeight: "100vh" }}>
+    <div className="py-5" style={{ background: "#1E73BE", minHeight: "100vh" }}>
       <br />
       <br />
       <br />
       <br />
       <br />
-      <div className="my-5 w-25 bg-white rounded-3 mx-auto p-4">
+      <div className="my-5 w-25 bg-white rounded mx-auto p-4">
         <h3 className="text-center title">Login</h3>
         <p className="text-center">Login to your account to continue.</p>
         <div className="error text-center">
-          {message.message === "Rejected" ? "You are not an Admin" : ""}
+          {message.message === "Rejected" ? "You are not an Admin!" : ""}
         </div>
         <form action="" onSubmit={formik.handleSubmit}>
           <CustomInput
@@ -81,8 +81,8 @@ const Login = () => {
             </Link>
           </div>
           <button
-            className="border-0 px-3 py-2 text-white fw-bold w-100 text-center text-decoration-none fs-5"
-            style={{ background: "#ffd333" }}
+            className="border-0 px-3 py-2 text-white fw-bold w-100 text-center text-decoration-none fs-5 rounded"
+            style={{ background: "#1E73BE" }}
             type="submit"
           >
             Login
